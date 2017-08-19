@@ -1,0 +1,30 @@
+.container
+	.row
+		.row
+			.input-field.col.s3
+				%i.material-icons.prefix account_circle
+				%input#tag_name.validate{:type => "text"}/
+				%label{:for => "tag_name"} Tag name
+			.input-field.col.s3
+				%i.material-icons.prefix event_available
+				%input#input_from{:type => "text"}/
+				%label{:for => "input_from"} Start date
+			.input-field.col.s3
+				%i.material-icons.prefix event_available
+				%input#input_to{:type => "text"}/
+				%label{:for => "input_to"} End date
+			.input-field.col.s3
+				%a#get_api_data.waves-effect.waves-light.btn
+					%i.material-icons.right> send
+					button
+	.row
+		%table#data_api_table.tablesorter.col.s12.highlight
+			%thead
+				%tr
+					%th Username
+					%th Likes
+					%th Comments
+					%th Link
+					%th Time
+					%th Type
+			%tbody
