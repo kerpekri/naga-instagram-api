@@ -2,18 +2,26 @@ $(function() {
   initializeDatePickers();
 
   $("#get_api_data").click(function(){
-    var from = $('input[name=_from_date]').val();
-    var to = $('input[name=_to_date]').val();
-    loadInstagramApiData(from, to);
+    var from_date = $('input[name=_from_date]').val();
+    var to_date = $('input[name=_to_date]').val();
+    var hash_tag_name = $('#hash_tag_name').val();
+    loadInstagramApiData(from_date, to_date, hash_tag_name);
   });
 
-  function loadInstagramApiData(from, to) {
+  function loadInstagramApiData(from, to, hash_tag) {
     var dataApiTable = $("#data_api_table");
+    var loading_bar = $('#loading_bar');
 
     dataApiTable.tablesorter();
+    loading_bar.toggleClass('hide');
+
     $.ajax({
       url: "/load_data",
-      data: {'from': from, 'to': to},
+      data: {
+        'from': from, 
+        'to': to,
+        'hash_tag': hash_tag
+      },
       type: "GET",
       dataType : "html",
       success: function (html) {
@@ -25,6 +33,7 @@ $(function() {
       alert("Sorry, there was a problem!");
     })
     .done(function(xhr, status) {
+      loading_bar.toggleClass('hide');
       dataApiTable.trigger("update");
       return false;
     })

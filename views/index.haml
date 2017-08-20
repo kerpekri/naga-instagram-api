@@ -1,10 +1,13 @@
+#loading_container
+	.progress#loading_bar.hide
+		.indeterminate
 .container
 	.row
 		.row
 			.input-field.col.s3
 				%i.material-icons.prefix account_circle
-				%input#tag_name.validate{:type => "text"}/
-				%label{:for => "tag_name"} Tag name
+				%input#hash_tag_name{:type => "text"}/
+				%label{:for => "hash_tag_name"} Tag name
 			.input-field.col.s3
 				%i.material-icons.prefix event_available
 				%input#input_from{:type => "text"}/

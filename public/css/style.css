@@ -1,3 +1,13 @@
-  html {
-    font-family: GillSans, Calibri, Trebuchet, sans-serif;
-  }
+html, body {
+  width:100%;
+  font-family: GillSans, Calibri, Trebuchet, sans-serif;
+}
+#loading_bar {
+  height: 2px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#loading_container {
+  overflow: hidden;
+  height: 2px;
+}

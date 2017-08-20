@@ -18,7 +18,7 @@ get '/load_data' do
     from_date = Date.parse @params[:from]
     to_date = Date.parse @params[:to]
 
-    instagram_api_data = InstagramApi.tag('mynagaboard').recent_media.data
+    instagram_api_data = InstagramApi.tag(@params[:hash_tag]).recent_media.data
     filtered_data = []
 
     JSON.parse(instagram_api_data.to_json).each do |data|
