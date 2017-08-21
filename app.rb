@@ -6,7 +6,7 @@ require 'json'
 require 'pry'
 
 InstagramApi.config do |config|
-  config.access_token = '3466732372.c2fab6f.2b9c0d50e67e4fa5875cc71903f74304'
+  config.access_token = ENV['INSTAGRAM_ACCESS_TOKEN']
 end
 
 get '/' do
