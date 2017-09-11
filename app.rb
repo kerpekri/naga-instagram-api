@@ -43,5 +43,3 @@ get '/load_data' do
     "<h1>Not an Ajax request!</h1>"
   end
 end
-
-#https://github.com/sinatra/sinatra-book/blob/master/book/Models.markdown

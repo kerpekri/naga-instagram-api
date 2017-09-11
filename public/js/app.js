@@ -30,6 +30,7 @@ $(function() {
       }
     })
     .fail(function(xhr, status, errorThrown) {
+      loading_bar.toggleClass('hide');
       alert("Sorry, there was a problem!");
     })
     .done(function(xhr, status) {
@@ -78,5 +79,4 @@ $(function() {
       }
     })
   };
-/* end */
 })
