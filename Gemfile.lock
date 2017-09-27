@@ -47,7 +47,6 @@ GEM
     mustermann (1.0.1)
     mustermann19 (0.4.4)
       enumerable-lazy
-    oj (3.3.6)
     padrino (0.14.1.1)
       padrino-admin (= 0.14.1.1)
       padrino-cache (= 0.14.1.1)
@@ -126,7 +125,6 @@ DEPENDENCIES
   hightop
   instagram_api_client
   mocha
-  oj
   padrino (= 0.14.1.1)
   pg
   pry

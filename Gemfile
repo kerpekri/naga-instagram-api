@@ -5,7 +5,7 @@ gem 'puma' # or mongrel
 gem 'foreman'
 
 # Optional JSON codec (faster performance)
-gem 'oj'
+#gem 'oj'
 
 # Project requirements
 gem 'rake'
