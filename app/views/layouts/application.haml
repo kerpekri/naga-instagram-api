@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %link{:href => "https://fonts.googleapis.com/icon?family=Material+Icons", :rel => "stylesheet"}/
+    = stylesheet_link_tag 'materialize.min'
+    = stylesheet_link_tag 'application'
+    = favicon_tag 'images/favicon.png'
+    / Let browser know website is optimized for mobile
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+  %body
+    = yield
+    %script{:src => "https://code.jquery.com/jquery-3.2.1.min.js", :type => "text/javascript"}
+    = javascript_include_tag 'materialize.min'
+    = javascript_include_tag 'jquery.tablesorter.min'
+    = javascript_include_tag "https://www.google.com/jsapi", "chartkick"
+    = javascript_include_tag "application", "chartkick"
+    = javascript_include_tag 'application'

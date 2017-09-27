@@ -1,0 +1,9 @@
+---
+:orm: activerecord
+:test: shoulda
+:mock: mocha
+:script: jquery
+:renderer: haml
+:stylesheet: none
+:namespace: NagaInstagramApi
+:migration_format: number
