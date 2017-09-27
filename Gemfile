@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 # Server requirements
 gem 'puma' # or mongrel
+gem 'foreman'
 
 # Optional JSON codec (faster performance)
 gem 'oj'
