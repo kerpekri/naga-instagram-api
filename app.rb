@@ -5,6 +5,8 @@ require 'instagram_api'
 require 'json'
 require 'pry'
 
+configure { set :server, :puma }
+
 InstagramApi.config do |config|
   config.access_token = ENV['INSTAGRAM_ACCESS_TOKEN']
 end
