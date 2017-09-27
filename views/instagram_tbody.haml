@@ -1,0 +1,10 @@
+- filtered_data.each do |data|
+  - data.each do |key, value|
+    %tr
+      %td= value[:username]
+      %td= value[:like_count]
+      %td= value[:comment_count]
+      %td
+        %a{:href => value[:link_to_post], :target => "_blank"} Link
+      %td= value[:creation_time] 
+      %td= value[:post_type]
